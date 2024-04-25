@@ -4,6 +4,42 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 480px;
     margin: 0 auto;
+    padding: 120px 0;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+input[type="text"] {
+    border: none;
+    border-radius: 8px;
+    width: 70%;
+    padding: 20px;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background-color: rgb(24, 20, 138);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #185ab0;
 }
