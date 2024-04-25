@@ -43,3 +43,41 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #185ab0;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+  
+  li span {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  li button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  li button:hover {
+    background-color: #c0392b;
+  }
+  
+  li.completed {
+    background-color: #ecf0f1;
+  }
