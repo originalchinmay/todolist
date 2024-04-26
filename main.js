@@ -16,7 +16,11 @@ function addToDo() {
         };
 
         todos.push(todo);
+
+        toDoInput.value = '';
+
+        renderToDo();
     }
-}
+};
 
 
