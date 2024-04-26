@@ -5,6 +5,7 @@ const toDoItem = document.querySelector('.todolist');
 
 let todos = [];
 
+//Function for adding to do list
 function addToDo() {
     const toDoText = toDoInput.value.trim();
 
@@ -21,6 +22,18 @@ function addToDo() {
 
         renderToDo();
     }
-};
+}
+
+//Function for adding toggle complete
+function toggleCompleted(id) {
+    todos = todos.map(todo => { if(todo.id === id)
+        {
+        todo.completed = !todo.completed;
+    }
+    return todo;
+});
+    renderToDo();
+}
+
 
 
