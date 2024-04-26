@@ -36,4 +36,12 @@ function toggleCompleted(id) {
 }
 
 
+//Function for deleting todo item
+
+function deleteToDo(id) {
+    todos = todos.filter(todo => todo.id != id)
+    renderToDo();
+}
+
+
 
