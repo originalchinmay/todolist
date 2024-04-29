@@ -2,7 +2,6 @@ const toDoList = document.querySelector("form");
 const toDoInput = document.querySelector("#to-do-input");
 const toDoAdd = document.querySelector('#add-button');
 const toDoItem = document.querySelector('.todolist');
-const form = document.querySelector('.form');
 
 let todos = [];
 
@@ -40,7 +39,7 @@ function toggleCompleted(id) {
 //Function for deleting todo item
 
 function deleteToDo(id) {
-    todos = todos.filter(todo => todo.id != id)
+    todos = todos.filter(todo => todo.id !== id)
     renderToDo();
 }
 
@@ -74,12 +73,10 @@ function renderToDo() {
     })
 }
 
-if (form) {
-    form.addEventListener("submit", event => {
-        e.preventDefault();
-        addToDo();
-    });
-}
 
+toDoList.addEventListener("submit", e => {
+    e.preventDefault();
+    addToDo();
+});
 
 renderToDo();
