@@ -2,6 +2,7 @@ const toDoList = document.querySelector("form");
 const toDoInput = document.querySelector("#to-do-input");
 const toDoAdd = document.querySelector('#add-button');
 const toDoItem = document.querySelector('.todolist');
+const form = document.querySelector('.form');
 
 let todos = [];
 
@@ -61,7 +62,7 @@ function renderToDo() {
 
         //Add class 'completed' if completed
         if(todo.completed) {
-            listItem.classList.toggle('completed')
+            listItem.classList.add('completed')
         }
 
         listItem.addEventListener('click', ()=> toggleCompleted(id))
@@ -73,9 +74,12 @@ function renderToDo() {
     })
 }
 
-form.addEventListener("submit", event => {
-    e.preventDefault();
-    addToDo();
-})
+if (form) {
+    form.addEventListener("submit", event => {
+        e.preventDefault();
+        addToDo();
+    });
+}
+
 
 renderToDo();
