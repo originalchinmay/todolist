@@ -43,6 +43,33 @@ function deleteToDo(id) {
     renderToDo();
 }
 
+function renderToDo() {
+    toDoItem.innerHTML = '';
+    
+    todos.forEach(todo => {
+        const listItem = document.createElement('li')
+        const listText = document.createElement('span')
+        const  btnDelete = document.createElement('button');
+
+        listText.textContent = todo.text;
+        btnDelete.textContent='delete';
+
+        btnDelete.addEventListener( 'click', ()=>{
+            deleteToDo(todo.id)
+        })
 
 
+        //Add class 'completed' if completed
+        if(todo.completed) {
+            listItem.classList.toggle('completed')
+        }
+
+        listItem.addEventListener('click', ()=> toggleCompleted(id))
+
+        listItem.appendChild(listText);
+        listItem.appendChild(btnDelete);
+
+        toDoItem.appendChild(listItem);
+    })
+}
 
