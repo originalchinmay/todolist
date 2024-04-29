@@ -73,3 +73,9 @@ function renderToDo() {
     })
 }
 
+form.addEventListener("submit", event => {
+    e.preventDefault();
+    addToDo();
+})
+
+renderToDo();
